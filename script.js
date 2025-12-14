@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', initializeApp);
 
 async function initializeApp() {
     try {
-        console.log('🚀 Initializing LensForge...');
+        console.log('Initializing LensForge...');
         
         // Load navbar first
         await loadNavbar();
@@ -39,9 +39,9 @@ async function initializeApp() {
         // Initialize cart count
         updateCartCount();
         
-        console.log('✅ App initialized successfully');
+        console.log(' App initialized successfully');
     } catch (error) {
-        console.error('❌ Initialization error:', error);
+        console.error(' Initialization error:', error);
         showError('Failed to load application. Please refresh.');
     }
 }
@@ -49,7 +49,7 @@ async function initializeApp() {
 // ==================== LOAD FUNCTIONS ====================
 async function loadNavbar() {
     try {
-        console.log('📱 Loading navbar...');
+        console.log(' Loading navbar...');
         const response = await fetch('navbar.html');
         if (!response.ok) throw new Error('Navbar not found');
         
@@ -62,34 +62,34 @@ async function loadNavbar() {
         // Setup event listeners
         setupEventListeners();
         
-        console.log('✅ Navbar loaded');
+        console.log(' Navbar loaded');
     } catch (error) {
-        console.error('❌ Error loading navbar:', error);
+        console.error(' Error loading navbar:', error);
     }
 }
 
 async function loadHero() {
     try {
-        console.log('🎨 Loading hero section...');
+        console.log(' Loading hero section...');
         const response = await fetch('hero.html');
         if (!response.ok) throw new Error('Hero not found');
         
         const html = await response.text();
         document.getElementById('hero').innerHTML = html;
-        console.log('✅ Hero section loaded');
+        console.log(' Hero section loaded');
     } catch (error) {
-        console.error('❌ Error loading hero:', error);
+        console.error(' Error loading hero:', error);
     }
 }
 
 async function loadProducts() {
     try {
-        console.log('📦 Loading products...');
+        console.log(' Loading products...');
         
         // Check if products container exists
         const productsContainer = document.getElementById('products');
         if (!productsContainer) {
-            console.error('❌ Products container not found!');
+            console.error(' Products container not found!');
             return;
         }
         
@@ -108,7 +108,7 @@ async function loadProducts() {
         if (!response.ok) throw new Error('Products data not found');
         
         const products = await response.json();
-        console.log(`✅ Products loaded: ${products.length} products found`);
+        console.log(` Products loaded: ${products.length} products found`);
         
         // Store products globally
         allProducts = products;
@@ -118,7 +118,7 @@ async function loadProducts() {
         showProducts(products);
         
     } catch (error) {
-        console.error('❌ Error loading products:', error);
+        console.error(' Error loading products:', error);
         showProductsError();
     }
 }
@@ -130,7 +130,7 @@ function cacheDOMElements() {
     domCache.mobileSearchInput = document.getElementById('mobileSearchInput');
     domCache.cartCount = document.getElementById('cartCount');
     
-    console.log('🔍 DOM Elements cached:', {
+    console.log(' DOM Elements cached:', {
         productsContainer: !!domCache.productsContainer,
         searchInput: !!domCache.searchInput,
         mobileSearchInput: !!domCache.mobileSearchInput,
@@ -140,18 +140,18 @@ function cacheDOMElements() {
 
 // ==================== EVENT LISTENERS ====================
 function setupEventListeners() {
-    console.log('🎯 Setting up event listeners...');
+    console.log(' Setting up event listeners...');
     
     // Desktop search with debouncing
     if (domCache.searchInput) {
         domCache.searchInput.addEventListener('input', handleSearch);
-        console.log('✅ Desktop search listener added');
+        console.log(' Desktop search listener added');
     }
     
     // Mobile search with debouncing
     if (domCache.mobileSearchInput) {
         domCache.mobileSearchInput.addEventListener('input', handleSearch);
-        console.log('✅ Mobile search listener added');
+        console.log(' Mobile search listener added');
     }
     
     // Category filters
@@ -160,7 +160,7 @@ function setupEventListeners() {
         categoryLinks.forEach(link => {
             link.addEventListener('click', handleCategoryFilter);
         });
-        console.log(`✅ ${categoryLinks.length} category listeners added`);
+        console.log(` ${categoryLinks.length} category listeners added`);
     }
 }
 
@@ -170,7 +170,7 @@ function handleSearch(e) {
     
     searchTimeout = setTimeout(() => {
         const query = e.target.value.toLowerCase().trim();
-        console.log(`🔍 Searching for: "${query}"`);
+        console.log(` Searching for: "${query}"`);
         filterProducts(query);
     }, DEBOUNCE_DELAY);
 }
@@ -183,7 +183,7 @@ function handleCategoryFilter(e) {
     
     if (!isHomeLink) return;
     
-    console.log(`🏷️ Filtering by category: ${category}`);
+    console.log(` Filtering by category: ${category}`);
     
     // Update active state
     document.querySelectorAll('.nav-link').forEach(nav => nav.classList.remove('active'));
@@ -200,7 +200,7 @@ function handleCategoryFilter(e) {
 
 // ==================== PRODUCT FUNCTIONS ====================
 function filterProducts(query) {
-    console.log(`🔍 Filtering products with query: "${query}"`);
+    console.log(` Filtering products with query: "${query}"`);
     
     if (!query) {
         currentProducts = [...allProducts];
@@ -215,18 +215,18 @@ function filterProducts(query) {
         (product.summary && product.summary.toLowerCase().includes(query))
     );
     
-    console.log(`🔍 Found ${filtered.length} products matching "${query}"`);
+    console.log(` Found ${filtered.length} products matching "${query}"`);
     currentProducts = filtered;
     showProducts(filtered);
 }
 
 function showProducts(products) {
     if (!domCache.productsContainer) {
-        console.error('❌ Products container not found in showProducts!');
+        console.error('Products container not found in showProducts!');
         return;
     }
     
-    console.log(`🖼️ Displaying ${products.length} products`);
+    console.log(` Displaying ${products.length} products`);
     
     if (products.length === 0) {
         domCache.productsContainer.innerHTML = `
@@ -261,7 +261,7 @@ function showProducts(products) {
     // Append to container
     domCache.productsContainer.appendChild(row);
     
-    console.log(`✅ ${products.length} products displayed successfully`);
+    console.log(` ${products.length} products displayed successfully`);
 }
 
 function createProductCard(product) {
@@ -313,7 +313,7 @@ function showProductsError() {
 
 // ==================== CATEGORIES FUNCTIONALITY ====================
 function setupCategories() {
-    console.log('🏷️ Setting up categories...');
+    console.log(' Setting up categories...');
     
     // Category filter event for dropdown items
     const categoryFilters = document.querySelectorAll('.category-filter');
@@ -323,7 +323,7 @@ function setupCategories() {
                 e.preventDefault();
                 const category = this.getAttribute('data-category');
                 
-                console.log(`🏷️ Category selected: ${category}`);
+                console.log(` Category selected: ${category}`);
                 
                 // Filter products
                 const filtered = category === 'All' 
@@ -348,7 +348,7 @@ function setupCategories() {
                 }
             });
         });
-        console.log(`✅ ${categoryFilters.length} category filters setup`);
+        console.log(` ${categoryFilters.length} category filters setup`);
     }
     
     // Update category counts when products load
@@ -367,7 +367,7 @@ function updateCategoryCounts() {
         'Accessories': allProducts.filter(p => p.category === 'Accessories').length
     };
     
-    console.log('📊 Category counts:', counts);
+    console.log(' Category counts:', counts);
     
     // Update counts in UI if elements exist
     Object.keys(counts).forEach(category => {
@@ -385,7 +385,7 @@ function updateCartCount() {
         const cart = JSON.parse(localStorage.getItem('cart')) || [];
         const count = cart.length;
         
-        console.log(`🛒 Cart count: ${count} items`);
+        console.log(` Cart count: ${count} items`);
         
         // Update all cart count elements
         const cartBadges = document.querySelectorAll('#cartCount, .cart-count');
@@ -396,7 +396,7 @@ function updateCartCount() {
         
         return count;
     } catch (error) {
-        console.error('❌ Error updating cart count:', error);
+        console.error(' Error updating cart count:', error);
         return 0;
     }
 }
@@ -505,4 +505,4 @@ window.clearCart = function() {
     updateCartCount();
 };
 
-console.log('✅ script.js loaded successfully');
+console.log(' script.js loaded successfully');
