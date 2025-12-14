@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation | LensForge</title>
+    <style>
+        .navbar-placeholder {
+            height: 80px;
+            background: #121212;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Container -->
+    <nav class="navbar navbar-expand-lg navbar-dark custom-navbar py-3 sticky-top">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                <img src="LOGO.png" alt="LensForge Logo" class="brand-logo" loading="lazy">
+                <h2 class="m-0">LensForge</h2>
+            </a>
+
+            <!-- Mobile Toggler -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+                    data-bs-target="#mainNavbar" aria-controls="mainNavbar" 
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar Content -->
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <!-- Search Form - Desktop Only -->
+                <form class="d-none d-lg-flex flex-grow-1 mx-4" id="searchForm" role="search">
+                    <input class="form-control rounded-pill shadow-sm" type="search" 
+                           placeholder="Search cameras, lenses..." id="searchInput" 
+                           autocomplete="off" aria-label="Search products">
+                </form>
+
+                <!-- Navigation Links -->
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+    <li class="nav-item">
+        <a class="nav-link active" href="index.html" data-category="All">
+            <i class="fas fa-home me-1"></i> Home
+        </a>
+    </li>
+    
+    <!-- Categories Dropdown -->
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="categoriesDropdown" 
+           role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fas fa-th-large me-1"></i> Categories
+        </a>
+        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="categoriesDropdown">
+            <li><a class="dropdown-item category-filter" href="index.html" data-category="All">
+                <i class="fas fa-th-large me-2"></i> All Categories
+            </a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item category-filter" href="index.html" data-category="Cameras">
+                <i class="fas fa-camera me-2"></i> Cameras
+            </a></li>
+            <li><a class="dropdown-item category-filter" href="index.html" data-category="Camera Lenses">
+                <i class="fas fa-search me-2"></i> Lenses
+            </a></li>
+            <li><a class="dropdown-item category-filter" href="index.html" data-category="Lighting & Studio">
+                <i class="fas fa-lightbulb me-2"></i> Lighting
+            </a></li>
+            <li><a class="dropdown-item category-filter" href="index.html" data-category="Tripods & Supports">
+                <i class="fas fa-robot me-2"></i> Tripods
+            </a></li>
+            <li><a class="dropdown-item category-filter" href="index.html" data-category="Accessories">
+                <i class="fas fa-headset me-2"></i> Accessories
+            </a></li>
+        </ul>
+    </li>
+    
+    <!-- Featured Link -->
+    <li class="nav-item">
+        <a class="nav-link" href="index.html#about-sec">
+            <i class="fa-regular fa-address-card"></i></i> About
+        </a>
+    </li>
+</ul>
+
+                <!-- Cart Icon -->
+                <a href="cart.html" class="cart-icon ms-3 position-relative" 
+                   aria-label="Shopping Cart">
+                    <i class="fa-solid fa-cart-shopping fa-lg"></i>
+                    <span id="cartCount" class="badge bg-danger position-absolute top-0 start-100 translate-middle">
+                        0
+                    </span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Search Bar (Hidden on Desktop) -->
+    <div class="container-fluid d-lg-none bg-dark py-2 px-3">
+        <form id="mobileSearchForm">
+            <input class="form-control rounded-pill shadow-sm" type="search" 
+                   placeholder="Search products..." id="mobileSearchInput" 
+                   autocomplete="off">
+        </form>
+    </div>
+</body>
+</html>

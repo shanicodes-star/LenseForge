@@ -1,0 +1,276 @@
+<!-- Hero Section for LensForge -->
+<section class="hero-section position-relative overflow-hidden">
+    <!-- Background Pattern -->
+    <div class="hero-bg-pattern"></div>
+    
+    <!-- Animated Elements -->
+    <div class="hero-animation-elements">
+        <div class="circle circle-1"></div>
+        <div class="circle circle-2"></div>
+        <div class="circle circle-3"></div>
+    </div>
+    
+    <div class="container position-relative z-2">
+        <div class="row align-items-center min-vh-80 py-5">
+            <!-- Text Content -->
+            <div class="col-lg-6 col-md-8 text-white text-center text-md-start">
+                <!-- Badge -->
+                <span class="badge bg-warning text-dark px-3 py-2 mb-3 rounded-pill fw-semibold">
+                    <i class="fas fa-bolt me-1"></i> Premium Photography Gear
+                </span>
+                
+                <!-- Main Title -->
+                <h1 class="hero-title display-2 fw-bold mb-3">
+                    Capture <span class="text-warning">Every</span> Moment
+                </h1>
+                
+                <!-- Subtitle -->
+                <p class="hero-subtitle lead text-light mb-4">
+                    With Professional <span class="text-warning fw-semibold">Cameras & Lenses</span>
+                </p>
+                
+                <!-- Description -->
+                <p class="hero-description text-light mb-5 opacity-75">
+                    Discover the ultimate collection of professional photography equipment. 
+                    From mirrorless cameras to cinematic lenses, we provide gear trusted by 
+                    creators worldwide to bring your vision to life.
+                </p>
+                
+                <!-- CTA Buttons -->
+                <div class="hero-cta d-flex flex-wrap gap-3 justify-content-center justify-content-md-start">
+                    <a href="#products" class="btn btn-warning btn-lg px-4 py-3 rounded-pill fw-semibold">
+                        <i class="fas fa-camera me-2"></i> Shop Now
+                    </a>
+                    <!-- <a href="#about" class="btn btn-outline-warning btn-lg px-4 py-3 rounded-pill fw-semibold">
+                        <i class="fas fa-play-circle me-2"></i> Watch Demo
+                    </a> -->
+                </div>
+                
+                <!-- Stats -->
+                <div class="hero-stats row g-4 mt-5 pt-4 border-top border-white-10">
+                    <div class="col-4 text-center">
+                        <h3 class="text-warning fw-bold mb-1">500+</h3>
+                        <p class="small text-light opacity-75 mb-0">Products</p>
+                    </div>
+                    <div class="col-4 text-center">
+                        <h3 class="text-warning fw-bold mb-1">50+</h3>
+                        <p class="small text-light opacity-75 mb-0">Brands</p>
+                    </div>
+                    <div class="col-4 text-center">
+                        <h3 class="text-warning fw-bold mb-1">24/7</h3>
+                        <p class="small text-light opacity-75 mb-0">Support</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Image Content -->
+            <div class="col-lg-6 col-md-4 d-none d-md-block position-relative">
+                <!-- Main Camera Image -->
+                <div class="hero-image-container position-relative">
+                    <img src="camera-hero.png" 
+                         alt="Professional Camera - LensForge" 
+                         class="hero-main-img img-fluid"
+                         loading="eager"
+                         width="600"
+                         height="600">
+                    
+                    <!-- Floating Elements -->
+                    <div class="floating-element lens">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1042/1042339.png" alt="Camera Lens" class="img-fluid">
+                    </div>
+                    <div class="floating-element tripod">
+                        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Tripod" class="img-fluid">
+                    </div>
+                    <div class="floating-element flash">
+                        <img src="https://cdn-icons-png.flaticon.com/512/2997/2997958.png" alt="Camera Flash" class="img-fluid">
+                    </div>
+                </div>
+                
+                <!-- Trust Badges -->
+                <div class="trust-badges position-absolute bottom-0 start-0 end-0 d-flex justify-content-center gap-3">
+                    <div class="badge bg-dark bg-opacity-75 px-3 py-2 rounded-pill">
+                        <i class="fas fa-shield-alt text-success me-1"></i> 2-Year Warranty
+                    </div>
+                    <div class="badge bg-dark bg-opacity-75 px-3 py-2 rounded-pill">
+                        <i class="fas fa-truck text-info me-1"></i> Free Shipping
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Scroll Indicator -->
+    <div class="scroll-indicator position-absolute bottom-0 start-50 translate-middle-x mb-4 d-none d-md-block">
+        <a href="#products" class="text-warning text-decoration-none">
+            <div class="d-flex flex-column align-items-center">
+                <span class="small mb-1">Explore Products</span>
+                <i class="fas fa-chevron-down fa-bounce"></i>
+            </div>
+        </a>
+    </div>
+</section>
+
+<!-- Hero CSS (Inline for Performance) -->
+<style>
+    .hero-section {
+        background: linear-gradient(135deg, 
+            rgba(11, 11, 11, 0.95) 0%, 
+            rgba(33, 33, 33, 0.9) 50%, 
+            rgba(11, 11, 11, 0.95) 100%),
+            url('hero-bg.jpg') center/cover no-repeat;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .hero-bg-pattern {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: 
+            radial-gradient(circle at 20% 80%, rgba(240, 173, 78, 0.1) 0%, transparent 50%),
+            radial-gradient(circle at 80% 20%, rgba(240, 173, 78, 0.05) 0%, transparent 50%);
+        z-index: 1;
+    }
+    
+    .hero-animation-elements {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+        overflow: hidden;
+    }
+    
+    .circle {
+        position: absolute;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(240, 173, 78, 0.1), transparent 70%);
+        animation: float 15s infinite linear;
+    }
+    
+    .circle-1 {
+        width: 300px;
+        height: 300px;
+        top: 10%;
+        left: 10%;
+        animation-delay: 0s;
+    }
+    
+    .circle-2 {
+        width: 200px;
+        height: 200px;
+        top: 60%;
+        right: 15%;
+        animation-delay: 5s;
+    }
+    
+    .circle-3 {
+        width: 150px;
+        height: 150px;
+        bottom: 20%;
+        left: 20%;
+        animation-delay: 10s;
+    }
+    
+    .hero-image-container {
+        position: relative;
+        padding: 2rem;
+    }
+    
+    .hero-main-img {
+        filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.7));
+        animation: float 6s ease-in-out infinite;
+        position: relative;
+        z-index: 2;
+    }
+    
+    .floating-element {
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border-radius: 12px;
+        padding: 10px;
+        animation: float 4s ease-in-out infinite;
+        z-index: 3;
+    }
+    
+    .floating-element.lens {
+        top: 20%;
+        right: 10%;
+        animation-delay: 0.5s;
+    }
+    
+    .floating-element.tripod {
+        bottom: 30%;
+        left: 5%;
+        animation-delay: 1s;
+    }
+    
+    .floating-element.flash {
+        top: 50%;
+        right: 5%;
+        animation-delay: 1.5s;
+    }
+    
+    .floating-element img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+    
+    .min-vh-80 {
+        min-height: 80vh;
+    }
+    
+    .border-white-10 {
+        border-color: rgba(255, 255, 255, 0.1) !important;
+    }
+    
+    @keyframes float {
+        0%, 100% {
+            transform: translateY(0) rotate(0deg);
+        }
+        50% {
+            transform: translateY(-20px) rotate(5deg);
+        }
+    }
+    
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+        .hero-title {
+            font-size: 2.5rem;
+        }
+        
+        .hero-cta {
+            justify-content: center !important;
+        }
+        
+        .hero-stats {
+            margin-top: 2rem;
+        }
+        
+        .hero-image-container {
+            padding: 1rem;
+        }
+    }
+    
+    @media (max-width: 576px) {
+        .hero-title {
+            font-size: 2rem;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.1rem;
+        }
+        
+        .btn-lg {
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+        }
+    }
+</style>
