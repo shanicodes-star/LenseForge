@@ -313,36 +313,137 @@
         box-shadow: 0 5px 15px rgba(240, 173, 78, 0.3);
     }
     
-    /* Responsive Adjustments */
-    @media (max-width: 768px) {
-        .site-footer {
-            text-align: center;
-        }
-        
-        .social-links .d-flex {
-            justify-content: center;
-        }
-        
-        .contact-info li {
-            justify-content: center;
-            text-align: center;
-        }
-        
-        .contact-info li div {
-            text-align: center;
-        }
-        
-        .legal-links {
-            text-align: center !important;
-        }
-        
-        #footerBackToTop {
-            position: fixed !important;
-            bottom: 20px;
-            right: 20px;
-            top: auto !important;
-        }
+/* Responsive Adjustments - LEFT ALIGN WITH 10px MARGIN */
+@media (max-width: 768px) {
+    .site-footer {
+        text-align: left !important;
+        padding-top: 2rem !important;
     }
+    
+    /* All columns 10px left margin */
+    .site-footer .col-lg-4,
+    .site-footer .col-lg-2,
+    .site-footer .col-md-6 {
+        margin-bottom: 2rem;
+        text-align: left !important;
+        padding-left: 10px !important; 
+        margin-left: 10px !important;  
+    }
+    
+    /* Headings with 10px left padding */
+    .site-footer h5 {
+        padding-left: 10px !important;
+        margin-left: 10px !important;
+    }
+    
+    /* Brand section */
+    .footer-brand {
+        padding-left: 10px !important;
+        margin-left: 10px !important;
+    }
+    
+    /* Social links - with left margin */
+    .social-links .d-flex {
+        justify-content: flex-start !important;
+        padding-left: 10px !important;
+        margin-left: 10px !important;
+    }
+    
+    /* Newsletter */
+    .newsletter {
+        padding-left: 10px !important;
+        margin-left: 10px !important;
+    }
+    
+    .newsletter .input-group {
+        justify-content: flex-start !important;
+        margin-left: 10px !important;
+        max-width: calc(100% - 20px);
+    }
+    
+    /* Contact info - with 10px left alignment */
+    .contact-info li {
+        justify-content: flex-start !important;
+        text-align: left !important;
+        flex-direction: row;
+        padding-left: 10px !important;
+        margin-left: 10px !important;
+    }
+    
+    .contact-info li div {
+        text-align: left !important;
+        margin-top: 0;
+        padding-left: 5px;
+    }
+    
+    .contact-info i {
+        margin-bottom: 0;
+        margin-right: 10px !important; /* Icon aur text ke darmiyan space */
+        flex-shrink: 0;
+        margin-left: 5px;
+    }
+    
+    /* Footer links - with 10px left margin */
+    .footer-links,
+    .footer-categories {
+        text-align: left !important;
+        padding-left: 15px !important; /* ✅ 10px + extra 5px */
+        margin-left: 10px !important;
+    }
+    
+    .footer-links li,
+    .footer-categories li {
+        display: block;
+        text-align: left !important;
+        margin-bottom: 0.75rem;
+        padding-left: 5px;
+    }
+    
+    .footer-links a,
+    .footer-categories a {
+        display: inline-block;
+        padding: 0.25rem 0;
+        padding-left: 5px;
+    }
+    
+    /* Map - with left margin */
+    .footer-map {
+        width: calc(100% - 20px);
+        margin-left: 10px !important;
+        margin-right: 10px;
+    }
+    
+    /* Legal links - with left margin */
+    .footer-bottom {
+        padding-left: 10px !important;
+        margin-left: 10px !important;
+    }
+    
+    .legal-links {
+        text-align: left !important;
+        justify-content: flex-start !important;
+        flex-wrap: wrap;
+        gap: 1rem;
+        padding-left: 10px !important;
+        margin-left: 10px !important;
+    }
+    
+    .legal-links .list-inline-item {
+        margin: 0;
+        margin-right: 1rem;
+        padding-left: 5px;
+    }
+    
+    /* Back to top button */
+    #footerBackToTop {
+        position: fixed !important;
+        bottom: 20px;
+        right: 20px;
+        top: auto !important;
+        width: 50px !important;
+        height: 50px !important;
+    }
+}
 </style>
 
 <!-- Footer JavaScript -->
@@ -380,3 +481,4 @@
     });
 
 </script>
+
